@@ -25,7 +25,16 @@ classDiagram
         -int customerId
         -String name
         -String email
+        -String phoneNumber
+        +Customer(int, String, String)
+        +Customer()
+        +getCustomerId() int
         +getName() String
+        +setName(String) void
+        +getEmail() String
+        +setEmail(String) void
+        +getPhoneNumber() String
+        +setPhoneNumber(String) void
         +getCustomerInfo() String
     }
 
@@ -33,7 +42,12 @@ classDiagram
         -int productId
         -String name
         -double price
+        +Product(int, String, double)
+        +getProductId() int
+        +getName() String
+        +setName(String) void
         +getPrice() double
+        +setPrice(double) void
         +getProductInfo() String
     }
 
@@ -41,10 +55,17 @@ classDiagram
         -int orderId
         -List~Product~ products
         -Customer customer
-        +addProduct(Product p)
+        +Order(int, Customer)
+        +addProduct(Product) void
+        +removeProduct(Product) void
         +calculateTotal() double
+        +getOrderId() int
+        +getCustomer() Customer
+        +setCustomer(Customer) void
+        +getProducts() List~Product~
         +displayOrder() void
     }
 
-    Order "1" --> "1" Customer : belongsTo
-    Order "1" o-- "*" Product : contains
+   Order "1" --> "1" Customer : belongsTo
+   Order "1" o-- "*" Product : contains
+
