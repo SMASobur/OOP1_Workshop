@@ -10,8 +10,8 @@ public class Customer {
     //Constructors
     public Customer(int customerId, String name, String email){
         this.customerId=customerId;
-        this.name= name;
-        this.email = email;
+        setName(name);
+        setEmail(email);
     }
     // Default constructor
     public Customer() {

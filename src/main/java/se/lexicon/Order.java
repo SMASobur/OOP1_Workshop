@@ -6,13 +6,14 @@ import java.util.List;
 public class Order {
     //private fields
     private int orderId;
-    private double totalPrice;
     private List<Product> products;
+    private Customer customer;
 
 
     //Constructor
-    public Order(int orderId){
+    public Order(int orderId, Customer customer){
         this.orderId = orderId;
+        this.customer = customer;
         this.products = new ArrayList<>();
     }
 
@@ -37,6 +38,10 @@ public class Order {
         return total;
     }
     //Getters & setters
+
+    public Customer getCustomer() {
+        return customer;
+    }
 
     public int getOrderId() {
         return orderId;
