@@ -13,7 +13,7 @@ public class Order {
     //Constructor
     public Order(int orderId, Customer customer){
         this.orderId = orderId;
-        this.customer = customer;
+        setCustomer(customer);
         this.products = new ArrayList<>();
     }
 
@@ -42,6 +42,12 @@ public class Order {
     public Customer getCustomer() {
         return customer;
     }
+    public void setCustomer(Customer customer) {
+        if (customer == null) {
+            throw new IllegalArgumentException("Order must have a customer.");
+        }
+        this.customer = customer;
+    }
 
     public int getOrderId() {
         return orderId;
@@ -53,8 +59,12 @@ public class Order {
 
     public void displayOrder() {
         System.out.println("Order ID: " + orderId);
+        System.out.println("Customer: " + customer.getName());
+        System.out.println("Number of items: "+ products.size());
+
         for (Product p : products) {
             System.out.println( p.getProductInfo());
+
         }
         System.out.println("Total Order Value: SEK " + calculateTotal());
         System.out.println("------------------------------------------");

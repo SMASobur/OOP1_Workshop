@@ -42,6 +42,6 @@ public class Product {
     }
 
     public String getProductInfo() {
-        return "ID: " + productId + " | Name: " + name + " | Price: SEK " + price;
+        return "Product ID: " + productId + " | Name: " + name + " | Price: SEK " + price;
     }
 }
