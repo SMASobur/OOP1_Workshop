@@ -45,6 +45,6 @@ public class Product {
     public Category getCategory() { return category; }
 
     public String getProductInfo() {
-        return "Product ID: " + productId + " | Name: " + name + " | Price: SEK " + price;
+        return "Product ID: " + productId + " | Name: " + name + " | Price: SEK " + String.format("%.2f", price);
     }
 }

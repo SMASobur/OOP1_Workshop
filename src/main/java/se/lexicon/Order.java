@@ -66,7 +66,7 @@ public class Order {
             System.out.println( p.getProductInfo());
 
         }
-        System.out.println("Total Order Value: SEK " + calculateTotal());
+        System.out.println("Total Order Value: SEK " + String.format("%.2f",calculateTotal()));
         System.out.println("------------------------------------------");
     }
 
