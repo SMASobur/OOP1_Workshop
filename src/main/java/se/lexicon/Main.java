@@ -7,10 +7,10 @@ public class Main {
 
     public static void main(String[] args) {
         // 1. Create Customers list
-        Customer anna = new Customer(1, "Anna", "anna@mail.com");
-        Customer ragavi = new Customer(2, "Erik", "erik@lexicon.se");
-        Customer muthana = new Customer(1, "Anna", "anna@mail.com");
-        Customer shamu = new Customer(2, "Erik", "erik@lexicon.se");
+        Customer anna = new Customer(1, "Anna", "anna@lexicon.com");
+        Customer ragavi = new Customer(2, "ragavi", "ragavi@lexicon.se");
+        Customer muthana = new Customer(1, "muthana", "muthana@mail.com");
+        Customer shamu = new Customer(2, "shamu", "shamu@lexicon.se");
 
         // 2. Define Products list
         Product p1 = new Product(1, "Monitor", 7199.90);
