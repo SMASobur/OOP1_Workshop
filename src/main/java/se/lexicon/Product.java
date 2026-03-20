@@ -5,15 +5,17 @@ public class Product {
     private int productId;
     private String name;
     private double price;
+    private Category category;
 
     // Constructor
-    public Product(int productId, String name, double price) {
+    public Product(int productId, String name, double price,  Category category) {
         this.productId = productId;
         setName(name);
         setPrice(price);
     }
 
-    // Getters and Setters
+    // Getters and Setters,
+
     public int getProductId() {
         return productId;
     }
@@ -40,6 +42,7 @@ public class Product {
             throw new IllegalArgumentException("Price cannot be negative.");
         }
     }
+    public Category getCategory() { return category; }
 
     public String getProductInfo() {
         return "Product ID: " + productId + " | Name: " + name + " | Price: SEK " + price;
