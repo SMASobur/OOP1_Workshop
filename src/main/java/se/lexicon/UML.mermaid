@@ -20,12 +20,14 @@ classDiagram
         -int productId
         -String name
         -double price
-        +Product(int, String, double)
+        -Category catetory
+        +Product(int, String, double, Category)
         +getProductId() int
         +getName() String
         +setName(String) void
         +getPrice() double
         +setPrice(double) void
+        +getCategory() Category
         +getProductInfo() String
     }
 
