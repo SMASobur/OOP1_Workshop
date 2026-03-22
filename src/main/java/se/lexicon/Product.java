@@ -12,6 +12,8 @@ public class Product {
         this.productId = productId;
         setName(name);
         setPrice(price);
+        setCategory(category);
+
     }
 
     // Getters and Setters,
@@ -42,6 +44,14 @@ public class Product {
             throw new IllegalArgumentException("Price cannot be negative.");
         }
     }
+
+    public void setCategory(Category category) {  // FIXED: Added setter
+        if (category == null) {
+            throw new IllegalArgumentException("Category cannot be null.");
+        }
+        this.category = category;
+    }
+
     public Category getCategory() { return category; }
 
     public String getProductInfo() {
