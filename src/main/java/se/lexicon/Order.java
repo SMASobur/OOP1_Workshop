@@ -9,7 +9,6 @@ public class Order {
     private List<Product> products;
     private Customer customer;
 
-
     //Constructor
     public Order(int orderId, Customer customer){
         this.orderId = orderId;
@@ -37,11 +36,12 @@ public class Order {
         }
         return total;
     }
-    //Getters & setters
 
+    //Getters & setters
     public Customer getCustomer() {
         return customer;
     }
+
     public void setCustomer(Customer customer) {
         if (customer == null) {
             throw new IllegalArgumentException("Order must have a customer.");
@@ -58,17 +58,18 @@ public class Order {
     }
 
     public void displayOrder() {
+        System.out.println("==========================================");
         System.out.println("Order ID: " + orderId);
-        System.out.println("Customer: " + customer.getName());
-        System.out.println("Number of items: "+ products.size());
+        System.out.println("Customer: " + customer.getName() + " (ID: " + customer.getCustomerId() + ")");
+        System.out.println("Email: " + customer.getEmail());
+        System.out.println("Number of items: " + products.size());
+        System.out.println("------------------------------------------");
 
         for (Product p : products) {
-            System.out.println( p.getProductInfo());
-
+            System.out.println(p.getProductInfo());
         }
-        System.out.println("Total Order Value: SEK " + String.format("%.2f",calculateTotal()));
         System.out.println("------------------------------------------");
+        System.out.println("Total Order Value: SEK " + String.format("%.2f", calculateTotal()));
+        System.out.println("==========================================\n");
     }
-
-
 }
